@@ -24,7 +24,7 @@ function Hero() {
         </p>
         <a
           href="#shop"
-          className="group bg-eco-500 text-white text-lg md:text-xl font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 ease-in-out hover:bg-eco-600 hover:shadow-xl hover:transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-eco-400 focus:ring-opacity-50 flex items-center"
+          className="group bg-eco-800 text-white text-lg md:text-xl font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 ease-in-out hover:bg-eco-600 hover:shadow-xl hover:transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-eco-400 focus:ring-opacity-50 flex items-center"
         >
           Shop now
           <span className="ml-2 transform group-hover:translate-x-1 transition-transform duration-200">
