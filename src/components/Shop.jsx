@@ -3,7 +3,13 @@ import products from "../items";
 
 function Shop() {
   const items = products.map((item) => {
-    return <Card coverImg={item.coverImg} />;
+    return (
+      <Card
+        coverImg={item.coverImg}
+        productName={item.name}
+        description={item.description}
+      />
+    );
   });
 
   return (
