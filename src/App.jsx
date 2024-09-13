@@ -26,7 +26,7 @@ function App() {
       <Shop />
       <footer className="h-[40vh] w-full bg-eco-800 p-20 flex items-center">
         <div>
-          <h1 className="font-open-sans text-4xl font-bold mb-6">Eco shop.</h1>
+          <h1 className="font-open-sans text-4xl font-bold mb-6">Ecco shop.</h1>
           <p className="max-w-60">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis
             totam, optio iure tenetur error vitae quibusdam{" "}
