@@ -53,7 +53,7 @@ function Nav({ onCartClick }) {
             <NavLink href="#" label="Shop" mobile />
             <button
               onClick={onCartClick}
-              className="text-white hover:bg-eco-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center transition duration-150 ease-in-out"
+              className="text-white hover:bg-eco-700 hover:text-white px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center transition duration-150 ease-in-out"
             >
               Cart
               <ShoppingCart className="ml-2 h-5 w-5" />
