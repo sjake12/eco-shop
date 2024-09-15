@@ -9,6 +9,7 @@ function Products() {
         coverImg={item.coverImg}
         productName={item.name}
         description={item.description}
+        rating={item.rating}
       />
     );
   });
