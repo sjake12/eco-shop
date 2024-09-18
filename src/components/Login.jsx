@@ -1,12 +1,17 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Login({ onClose }) {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Login attempted with:", email, password);
+  const handleLogin = () => {
+    if (username === "admin" && password === "1234") {
+      navigate("/admin");
+    } else {
+      alert("Invalid credentials");
+    }
   };
 
   return (
@@ -37,7 +42,7 @@ function Login({ onClose }) {
             </button>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleLogin} className="space-y-4">
             <div>
               <label
                 htmlFor="email"
@@ -46,10 +51,10 @@ function Login({ onClose }) {
                 Email
               </label>
               <input
-                type="email"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                type="username"
+                id="username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-eco-500"
                 required
               />
