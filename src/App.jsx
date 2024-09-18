@@ -4,7 +4,11 @@ import Hero from "./components/Hero";
 import Products from "./components/Products";
 import Shop from "./components/Shop";
 import Checkout from "./components/Checkout";
+
 import Login from "./components/Login";
+
+import Admin from "./components/Admin";
+
 import "./App.css";
 
 function App() {
@@ -55,6 +59,7 @@ function App() {
           </div>
         </div>
       </footer>
+      {/* <Admin /> */}
     </>
   );
 }
