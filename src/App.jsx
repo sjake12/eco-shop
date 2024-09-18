@@ -4,24 +4,32 @@ import Hero from "./components/Hero";
 import Products from "./components/Products";
 import Shop from "./components/Shop";
 import Checkout from "./components/Checkout";
+import Login from "./components/Login";
 import "./App.css";
 
 function App() {
   const [isPopUpVisible, setIsPopUpVisible] = useState(false);
+  const [isLoginVisible, setIsLoginVisible] = useState(false);
 
-  const handleClick = () => {
+  const handleCartClick = () => {
     setIsPopUpVisible(true);
+  };
+
+  const handleLoginClick = () => {
+    setIsLoginVisible(true);
   };
 
   const handleClose = () => {
     setIsPopUpVisible(false);
+    setIsLoginVisible(false);
   };
 
   return (
     <>
       {isPopUpVisible && <Checkout onClose={handleClose} />}
-      <Nav onCartClick={handleClick} />
-      <Hero />
+      {isLoginVisible && <Login onClose={handleClose} />}
+      <Nav onCartClick={handleCartClick} />
+      <Hero onLoginClick={handleLoginClick} />
       <Products />
       <Shop />
       <footer className="h-[40vh] w-full bg-eco-800 p-10 flex flex-col items-center justify-center lg:justify-between text-white">
