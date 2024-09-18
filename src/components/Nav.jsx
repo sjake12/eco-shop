@@ -27,6 +27,9 @@ function Nav({ onCartClick }) {
                 Cart
                 <ShoppingCart className="ml-2 h-5 w-5" />
               </button>
+              <button className="text-white hover:bg-eco-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium flex items-center transition duration-150 ease-in-out">
+                Login
+              </button>
             </div>
           </div>
           <div className="md:hidden">
