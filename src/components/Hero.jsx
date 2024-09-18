@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import hero from "../assets/heo2.jpg";
 
-function Hero() {
+function Hero({ onLoginClick }) {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -22,15 +22,23 @@ function Hero() {
           Discover eco-friendly products that make a difference. Join us in
           creating a sustainable future, one purchase at a time.
         </p>
-        <a
-          href="#shop"
-          className="group bg-eco-800 text-white text-lg md:text-xl font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 ease-in-out hover:bg-eco-600 hover:shadow-xl hover:transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-eco-400 focus:ring-opacity-50 flex items-center"
-        >
-          Shop now
-          <span className="ml-2 transform group-hover:translate-x-1 transition-transform duration-200">
-            →
-          </span>
-        </a>
+        <div className="flex space-x-4">
+          <a
+            href="#shop"
+            className="group bg-eco-800 text-white text-lg md:text-xl font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 ease-in-out hover:bg-eco-600 hover:shadow-xl hover:transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-eco-400 focus:ring-opacity-50 flex items-center"
+          >
+            Shop now
+            <span className="ml-2 transform group-hover:translate-x-1 transition-transform duration-200">
+              →
+            </span>
+          </a>
+          <button
+            onClick={onLoginClick}
+            className="group bg-eco-800 text-white text-lg md:text-xl font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 ease-in-out hover:bg-eco-600 hover:shadow-xl hover:transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-eco-400 focus:ring-opacity-50"
+          >
+            Log In
+          </button>
+        </div>
       </div>
       <div className="lg:w-1/2 h-64 md:h-96 lg:h-[80vh] relative overflow-hidden rounded-3xl shadow-2xl">
         <div
