@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ShoppingCart, Menu, X } from "lucide-react";
 
-function Nav({ onCartClick }) {
+function Nav({ onCartClick, onLoginClick }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -17,7 +17,7 @@ function Nav({ onCartClick }) {
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <NavLink href="#" label="Home" />
+              <NavLink href="/" label="Home" />
               <NavLink href="#" label="Shop" />
               <button
                 onClick={onCartClick}
@@ -27,7 +27,10 @@ function Nav({ onCartClick }) {
                 Cart
                 <ShoppingCart className="ml-2 h-5 w-5" />
               </button>
-              <button className="text-white hover:bg-eco-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium flex items-center transition duration-150 ease-in-out">
+              <button
+                onClick={onLoginClick}
+                className="text-white hover:bg-eco-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium flex items-center transition duration-150 ease-in-out"
+              >
                 Login
               </button>
             </div>

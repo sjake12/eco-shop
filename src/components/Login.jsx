@@ -75,6 +75,17 @@ function Login({ onClose }) {
                 required
               />
             </div>
+            <div className="text-center">
+              <p className="text-sm text-gray-600">
+                Don't have an account?{" "}
+                <a
+                  href="/signup"
+                  className="text-eco-800 hover:text-eco-700 transition-colors"
+                >
+                  Sign up
+                </a>
+              </p>
+            </div>
             <div className="flex justify-end space-x-4">
               <button
                 type="submit"
